@@ -54,3 +54,39 @@ var soundpeek = new Soundpeek({
 
 ```
 Check out [Spotify's track reference](https://developer.spotify.com/web-api/get-track/#example) for available data
+
+```javascript
+# Default Options
+defaults: {
+    init: true,
+    elem: window.document.documentElement,
+    fillEmptyWithTrack: true,
+    elementID: 'spotify-player',
+    targetSelector: '.soundpeek',
+    prependElement: '',
+    appendElement: '',
+    offsetTop: 20,
+    playSound: true,
+    delay: 0,
+    onPlay: function(el){},
+    onPause: function(el){},
+    onError: function(el){},
+    fadeInVolume: true,
+    restartPreviewOnPause: true,
+    defaultLoadingText: 'Loading',
+    debug: false, // Fetches mockup data from data.json if set to true
+    progressBar: false,
+    template: '<div class="cover">' +
+      '<img src="{{ track.album.images[1].url }}" alt="">' +
+    '</div>' +
+    '<div class="content-container">' +
+      '<div class="content">' +
+        '<div class="track">{{ track.name }}</div>' +
+        '<div class="artists">' +
+          '{{ track.artistsString }}' +
+        '</div>' +
+      '</div>' +
+    '<div class="progress-bar"></div>' +
+    '</div>'
+  },
+```
