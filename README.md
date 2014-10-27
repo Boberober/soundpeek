@@ -1,5 +1,5 @@
 # Spotify Previewer
-
+[Demo!](http://boberober.github.io/soundpeek/)
 ### Install Gulp if you haven't already
 ```sh
 $ npm install --global gulp
