@@ -1,0 +1,68 @@
+$coverWidth: 150px;
+$spotifyGreen: #85bb23;
+$black: #222326;
+
+@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,900);
+
+.spotify-player {
+  background: $black;
+  color: white;
+  font-family: 'Source Sans Pro', sans-serif;
+  position: absolute;
+  display: none;
+  // display: flex;
+  z-index: 10000;
+  line-height: 1.5;
+  text-align: center;
+
+  -webkit-font-smoothing: antialiased;
+  transition: opacity .25s;
+  font-size: 16px;
+  justify-content: center;
+
+  .content {
+    max-width: $coverWidth*1.5;
+    min-width: $coverWidth;
+    padding: 0 20px;
+    float: left;
+    align-self: center;
+
+  }
+  .cover{
+    position: relative;
+    width: $coverWidth;
+    height: $coverWidth;
+    float: left;
+
+    img {
+      width: 100%;
+    }
+  }
+  .track {
+    margin: 0 0 8px 0;
+  }
+  .artists {
+    font-size: 0.8em;
+    color: #999;
+  }
+  &.active {
+    display: flex;
+    -webkit-animation: animation 1000ms linear both;
+    animation: animation 1000ms linear both;
+  }
+  .progress-bar {
+    background: $spotifyGreen;
+    height: 3px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+  &:after {
+    transition: background .25s;
+    content: "";
+    display: none;
+  }
+  &.loading {
+    opacity: 0.4;
+  }
+}

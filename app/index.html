@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>soundpeek.js | Robin Björklund</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,900' rel='stylesheet' type='text/css'>
+
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    
+  <script type="text/javascript" src="http://localhost:48626/takana.js"></script>
+
+
+</head>
+<body>
+<a href="https://github.com/you"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/38ef81f8aca64bb9a64448d0d70f1308ef5341ab/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f6461726b626c75655f3132313632312e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png"></a>
+<section class="hero" id="hero">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8 col-md-offset-2">
+
+        <h1 class="text-center">soundpeek.js</h1>
+        <h2 class="by-line">created by <a href="#">robin björklund</a></h2>
+        <button data-scroll-target="#what-is-it">What is it?</button>
+        <button class="git-button" id="git-button"><span>Get repo</span><div class="input"> $ <input class="pre" type="text" value="git clone https://github.com/asdasd.git" readonly></div></button>
+      </div>
+    </div>
+  </div>
+</section>
+
+    <div class="content" id="what-is-it">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 col-md-offset-3">
+          <section>
+            <hr>
+            <p class="lead text-center">Share your <span class="soundpeek" data-uri="spotify:track:2nVHqZbOGkKWzlcy1aMbE7">favorite songs</span>.</p>
+            <hr>
+          </section>
+          <section>
+            <h3 class="text-center">What is it?</h3>
+            <p>I love music <span class="parentheses">(and Spotify)</span>. So I made this small dependency free JavaScript library that allows you to add previews of songs to your blog or website. <span class="soundpeek" data-uri="spotify:track:3bsvgViy6y7Og66aA06XiA">Like this</span></p>
+            
+          </section>
+
+            <section id="how-does-it-work">
+              <h3 class="text-center">How does it work?</h3>
+              <p>I thought you'd never ask! <span class="soundpeek" data-uri="spotify:track:2vvwBjUBTQWZMIum68CPWx"></span> <span class="parentheses">(Spotify)</span>. They make this possible with the help of their wonderful <a href="https://developer.spotify.com/web-api/code-examples/">Web API</a>.</p>
+            </section>
+            <section id="so-how-do-i-use-it">
+              <h3 class="text-center">So.. How do I use it?</h3>
+              <p>It's super simple! Include the library at the bottom of your page and intitialize it. <br> Here's a simple example:</p>
+              <pre><code class="language-javascript">var soundpeek = new Soundpeek({
+      targetSelector: '.soundpeek',
+      prependElement: '&lt;span class="play-button"&gt;&lt;/span&gt;'
+    }); </code></pre>
+    <p>Get track by text:</p>
+              <pre><code class="language-markup">&lt;span class="soundpeek"&gt;Bohemian Rhapsody&lt;/span&gt;</code></pre>
+    <p>Get track by Spotify URI:</p>
+              <pre><code class="language-markup">&lt;span class="soundpeek" data-uri="spotify:track:1AhDOtG9vPSOmsWgNW0BEY"&gt;&lt;/span&gt;</code></pre>
+            </section>
+
+            <section id="i-want-to-know-more">
+              <h3 class="text-center">But, I want to know more!</h3>
+              <p>Say hi <a href="">@boberober</a>, or check out the source on <a href="#">GitHub</a> for all the options and whatnot.</p>
+            </section>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <script type="text/html" id="user_tmpl">
+
+    <div class="cover">
+      <img src="{{ track.album.images[1].url }}" alt="">
+    </div>
+    <div class="content-container">
+      <div class="content">
+        <div class="track">{{ track.name }}</div>
+        <div class="artists">
+          {{ track.artistsString }}
+        </div>
+      </div>
+    <div class="progress-bar"></div>
+    </div>
+
+  </script>
+  <script type="text/html" id="user_tmpl_2">
+
+    <div class="content-container">
+      <div class="content">
+        <div class="track">{{ track.name }}</div>
+        <div class="artists">
+          {{ track.artistsString }}
+        </div>
+      </div>
+    <div class="progress-bar"></div>
+    </div>
+
+  </script>
+
+  <script src="js/soundpeek.min.js"></script>
+  <script src="js/site.js"></script>
+  <script>
+
+  
+
+
+  </script>
+  <script src="js/prism.js"></script>
+</body>
+</html>

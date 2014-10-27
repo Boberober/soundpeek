@@ -1,0 +1,350 @@
+@import 'player';
+
+$brown: #523F0C;
+
+:before, :after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+* {
+-webkit-box-sizing: border-box;
+-moz-box-sizing: border-box;
+box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+}
+body {
+  font-family: 'Source Sans Pro', georgia, serif;
+  font-size: 16px;
+  line-height: 1.5;
+  min-height: 1200px; 
+  -webkit-font-smoothing: antialiased;
+  color: $black;
+  margin: 0;
+  padding-bottom: 30px;
+}
+h1{
+  margin-bottom: 50px;
+  margin-top: -50px;
+  font-size: 40px;
+  font-weight: 900;
+// color: $spotifyGreen;
+}
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+  line-height: 1.1;
+}
+h2, h3 {
+  font-weight: 900;
+  margin-bottom: 20px;
+  margin-top: 50px;
+}
+h3 {
+  font-size: 24px;
+}
+ul {
+  padding: 0;
+  li {
+    list-style: none;
+  }
+}
+
+button {
+  border: none;
+  border-radius: 20px;
+  padding: 12px 20px;
+  color: darken($spotifyGreen, 20%);
+  margin: 0 5px;
+  background: white;
+  background: transparent;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 10px;
+  cursor: ponter;
+  -webkit-animation: animation 1000ms linear both;
+  animation: animation 1000ms linear both;
+  border: 1px solid darken($spotifyGreen, 20%);
+
+  transition: all .25s;
+  outline: none;
+  // font-weight: bold;
+
+  &:hover {
+    cursor: pointer;
+
+    background: darken($spotifyGreen, 20%);
+    color: $spotifyGreen;
+
+  }
+  input {
+    background: transparent;
+    border: none;
+    outline: none;
+    width: 270px;
+  }
+}
+
+.by-line {
+  font-weight: 400;
+  font-size: 16px;
+  color: white;
+  position: absolute;
+  bottom: 0; 
+  right: 20px;
+
+  a {
+    color: white;
+  }
+  // text-transform: uppercase;
+  // font-weight: 600;
+}
+
+.git-button {
+  
+  width: 110px;
+  overflow: hidden;
+  transition: all .25s;
+  height: 38px;
+
+  .input {
+    transition: transform .5s;
+    transition-delay: .75s;
+    position: relative;
+    transform: translateY(-56px);
+    width: 300px;
+    
+  }
+
+  &:hover input {
+    color: $spotifyGreen;
+  }
+
+  span {
+    transition: transform .5s;
+    transition-delay: .5s;
+    display: inline-block;
+  }
+
+  &.active {
+    width: 320px;
+    
+    span {
+      transform: translateY(30px);
+    }
+
+    -webkit-animation: buttontransformer 1000ms;
+    .input {
+      transform: translateY(-13px);
+      width: 290px;
+    }
+  }  
+
+}
+
+
+
+
+.pre {
+  font-family: monospace;
+
+}
+
+.hero {
+  height:100vh;
+  min-height: 310px;
+  display: flex;
+  background: $spotifyGreen;
+  color: white;
+  text-align: center;
+
+
+      user-select: none;
+
+  h1 {
+
+        user-select: all;
+  }
+
+}
+.lead {
+  margin-bottom: 20px;
+  font-size: 21px;
+  font-weight: 300;
+  line-height: 1.4;
+}
+hr {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border: 0;
+  border-top: 1px solid #eee;
+  height: 0;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+
+}
+.text-center {
+  text-align: center;
+}
+
+a {
+  color: $spotifyGreen;
+}
+.container {
+  width: 600px;
+  margin: auto;
+}
+.content {
+  margin-top: 40px;
+  margin-bottom: 30px;
+}
+.diy {
+  margin-bottom: 30px;
+}
+.parentheses {
+  color: rgb(194, 194, 194);
+  font-size: 0.8em;
+  display: inline-block;
+  margin: 0 2px;
+}
+img {
+  max-width: 100%;
+}
+section {
+  margin-bottom: 60px;
+}
+// section {
+//   background: url(/images/free-falling.jpeg) center center;
+//   background-size: cover;
+//   padding: 150px 0;
+//   margin: 50px 0;
+// }
+
+a {
+  transition: color .25s;
+  &:hover {
+    color: $brown;
+  }
+}
+
+.soundpeek {
+  display: inline-block;
+  cursor: pointer;
+  color: $spotifyGreen;
+
+  &.error {
+    color: red;
+
+    &:after {
+      content: " (track was not found)";
+      color: rgb(187, 187, 187);
+
+    }
+  }
+  &:hover {
+    // color: darken(rgb(99, 178, 99), 10%);
+    color: $brown;
+  }
+
+  &.active {
+    .play-button {
+      background-image: url('/images/pause.png');
+      -webkit-animation: animation 1000ms linear both;
+      animation: animation 1000ms linear both;
+    }
+  }
+
+}
+
+.play-button {
+  position: relative;
+  top: 2px;
+  margin-right: 3px;
+  background-image: url('/images/play.png');
+  height: 16px;
+  width: 16px;
+  background-size: 100%;
+  display: inline-block;
+  transition: background .25s;
+  -webkit-animation: animation 1000ms linear both;
+  animation: animation 1000ms linear both;
+
+}
+
+.content-container {
+  display: flex;
+  position: relative;
+  overflow: hidden;
+}
+
+pre {
+  border: none;
+  border-radius: 0;
+}
+.big-button {
+  width: 100%;
+  background: $spotifyGreen;
+  color: white;
+  border-radius: 0;
+  box-shadow: 0px 3px 0px rgb(76, 107, 32);
+  padding: 15px;
+  margin-top: 30px;
+  outline: none;
+  position: relative;
+  top: 0;
+  transition: all 150ms;
+  border: none;
+
+  &:hover, &:focus {
+    background: darken($spotifyGreen, 10%);
+    outline: none;
+  }
+  &:active {
+    outline: none;
+    top: 3px;
+    box-shadow: 0px 0px 0px rgb(76, 107, 32);
+  }
+  
+}
+.white {
+  color: white;
+}
+.spotify-green {
+  color: darken($spotifyGreen, 10%);
+
+  hr, p {
+    color: darken($spotifyGreen, 10%);    
+    border-color: darken($spotifyGreen, 10%);    
+  }
+}
+.no-margin {
+  margin: 0;
+}
+
+::selection {
+  background: #86725B; /* WebKit/Blink Browsers */
+  color: $spotifyGreen;
+  // padding: 5px;
+}
+::-moz-selection {
+  background: #86725B; /* Gecko Browsers */
+  // color: white;
+}
+
+@media(max-width: 600px) {
+  .hero {
+    height: 50vh;
+  }
+  body {
+    padding-bottom: 0;
+  }
+  .container {
+    width: 100%;
+    padding: 20px;
+  }
+}
+
+@import 'animations';
+@import 'prism';
