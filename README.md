@@ -1,27 +1,27 @@
 # Spotify Previewer
 
-## Install Gulp if you haven't already
+### Install Gulp if you haven't already
 ```sh
 $ npm install --global gulp
 ```
 
-## Install dependencies:
+### Install dependencies:
 ```sh
 $ npm install 
 ```
 
-## Start web server
+### Start web server
 ```sh
 # Builds and starts web server at localhost:8000
 $ gulp
 ```
 
-## Example usage
+### Example usage
 ```javascript
-var spotifyPreview = new SpotifyPreview({
+var soundpeek = new Soundpeek({
       template: 'user_tmpl', // Custom template
       playSound: true,
-      targetClassName: 'spotify-preview', // Default
+      targetClassName: 'soundpeek', // Default
       onPlay: function(el) {
         el.classList.add('custom-active-class');
       },
