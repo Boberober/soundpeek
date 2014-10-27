@@ -56,7 +56,7 @@ var soundpeek = new Soundpeek({
 Check out [Spotify's track reference](https://developer.spotify.com/web-api/get-track/#example) for available data
 
 ```javascript
-# Default Options
+// Default Options
 defaults: {
     init: true,
     elem: window.document.documentElement,
@@ -74,7 +74,6 @@ defaults: {
     fadeInVolume: true,
     restartPreviewOnPause: true,
     defaultLoadingText: 'Loading',
-    debug: false, // Fetches mockup data from data.json if set to true
     progressBar: false,
     template: '<div class="cover">' +
       '<img src="{{ track.album.images[1].url }}" alt="">' +
