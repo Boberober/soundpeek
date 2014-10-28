@@ -1,14 +1,12 @@
 {
-  "name": "spotify-previewer",
+  "name": "Soundpeek",
   "version": "0.0.1",
   "description": "",
   "main": "gulpfile.js",
-  "dependencies": {
+  "devDependencies": {
     "gulp": "~3.8.8",
     "map-stream": "~0.1.0",
-    "gulp-jshint": "~1.8.5"
-  },
-  "devDependencies": {
+    "gulp-jshint": "~1.8.5",
     "gulp-autoprefixer": "^1.0.1",
     "gulp-sass": "^1.0.0",
     "gulp-minify-css": "^0.3.10",
@@ -20,9 +18,9 @@
     "gulp-clean": "^0.3.1",
     "run-sequence": "^1.0.1"
   },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "repository": {
+  	"type": "git",
+	 "url": "https://github.com/Boberober/soundpeek.git"
   },
-  "author": "Robin Björklund",
-  "license": "ISC"
+  "author": "Robin Björklund"
 }
