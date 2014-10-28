@@ -1,5 +1,5 @@
-# Spotify Previewer
-
+# Soundpeek
+[Demo!](http://boberober.github.io/soundpeek/)
 ### Install Gulp if you haven't already
 ```sh
 $ npm install --global gulp
@@ -55,6 +55,7 @@ var soundpeek = new Soundpeek({
 ```
 Check out [Spotify's track reference](https://developer.spotify.com/web-api/get-track/#example) for available data
 
+**Default object**
 ```javascript
 // Default Options
 defaults: {
