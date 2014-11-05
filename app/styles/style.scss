@@ -250,7 +250,7 @@ a {
 
   &.active {
     .play-button {
-      background-image: url('/images/pause.png');
+      background-image: url('../images/pause.png');
       -webkit-animation: animation 1000ms linear both;
       animation: animation 1000ms linear both;
     }
@@ -262,7 +262,7 @@ a {
   position: relative;
   top: 2px;
   margin-right: 3px;
-  background-image: url('/images/play.png');
+  background-image: url('../images/play.png');
   height: 16px;
   width: 16px;
   background-size: 100%;
